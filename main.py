@@ -193,7 +193,7 @@ def extrair_informacoes(texto):
 async def extrair_curriculo(
     file: UploadFile = File(...),
     # Descomente abaixo se quiser exigir token:
-    # credenciais: HTTPAuthorizationCredentials = Depends(verificar_token)
+    credenciais: HTTPAuthorizationCredentials = Depends(verificar_token)
 ):
     texto_extraido = ""
 
